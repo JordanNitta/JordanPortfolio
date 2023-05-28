@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { NavLink, Navigate, useNavigate } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+
 import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
     const navigate = useNavigate()

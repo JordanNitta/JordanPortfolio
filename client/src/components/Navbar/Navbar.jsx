@@ -30,8 +30,8 @@ const Navbar = () => {
 
     return (
         <nav className='fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50' >
-            <h1 className='font-style w-full text-main font-semibold text-[20px] cursor-pointer sm:text[20px]'>Jordan Nitta-Rodrigues</h1>
-            <ul className="hidden sm:flex sm:justify-center sm:items-center">
+            <h1 className='font-style w-full text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text[20px]'>Jordan Nitta-Rodrigues</h1>
+            <ul className="hidden sm:flex sm:justify-center sm:items-center ">
                 {navLinks.map((link, index) => (
                     <li key={index}>
                         <NavLink to={link.URL} className={({ isActive }) => isActive ? 'font-style text-primary-color text-[19px] px-4' : 'font-style text-main text-[19px] px-4'}>
@@ -41,33 +41,41 @@ const Navbar = () => {
                 ))}
             </ul>
             <div onClick={handleMenu} className='block '>
-                {!showMenu ? <AiOutlineMenu size={35} className='cursor-pointer text-main sm:hidden md:hidden' /> : <AiOutlineClose size={35} className='cursor-pointer text-main sm:hidden md:hidden' />}
+                {!showMenu ? <AiOutlineMenu size={35} className='cursor-pointer text-main ml-1 sm:hidden md:hidden' /> : <AiOutlineClose size={35} className='cursor-pointer ml-2 text-main sm:hidden md:hidden' />}
             </div>
-            {showMenu && (
-                <div className='fixed top-0 left-0 h-screen w-full bg-opacity-90 bg-gray-800 flex justify-center items-center sm:hidden md:hidden -z-30' >
-                    <ul className='flex flex-col justify-center items-center -space-y-4' onClick={handleClosedRoutes}>
-                        {navLinks.map((link, index) => (
-                            <li key={index}>
-                                <NavLink to={link.URL} className={({ isActive }) => isActive ? 'font-style text-primary-color text-[50px] font-semibold hover:text-primary-color transition duration-500' : 'font-style text-main text-[60px] font-semibold hover:text-primary-color transition duration-500'} onClick={handleClosedRoutes}>
-                                    {link.title}
-                                </NavLink>
-                            </li>
-                        ))}
-                        <div className='flex space-x-10'>
-                            {personalLinks.map((link, index) => {
-                                const IconLogo = link.logo;
-                                return (
-                                    <li key={index} className="text-main mt-10  hover:text-primary-color transition duration-500">
-                                        <a href={link.URL}>
-                                            <IconLogo size={25} />
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </div>
-                    </ul>
-                </div>
-            )}
+            <AnimatePresence>
+                {showMenu && (
+
+                    <motion.div
+                        initial={{ y: -500, opacity: 0 }}
+                        animate={{ y: 0, opacity: 10 }}
+                        exit={{ y: 0, opacity: -0 }}
+                        transition={{ duration: .8 }}
+                        className='fixed top-0 left-0 h-screen w-full bg-opacity-90 bg-gray-800 flex justify-center items-center sm:hidden md:hidden -z-30' >
+                        <ul className='flex flex-col justify-center items-center -space-y-4' onClick={handleClosedRoutes}>
+                            {navLinks.map((link, index) => (
+                                <li key={index}>
+                                    <NavLink to={link.URL} className={({ isActive }) => isActive ? 'font-style text-primary-color text-[50px] font-semibold hover:text-primary-color transition duration-500' : 'font-style text-main text-[60px] font-semibold hover:text-primary-color transition duration-500'} onClick={handleClosedRoutes}>
+                                        {link.title}
+                                    </NavLink>
+                                </li>
+                            ))}
+                            <div className='flex space-x-10'>
+                                {personalLinks.map((link, index) => {
+                                    const IconLogo = link.logo;
+                                    return (
+                                        <li key={index} className="text-main mt-10  hover:text-primary-color transition duration-500">
+                                            <a href={link.URL}>
+                                                <IconLogo size={25} />
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </div>
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
 
     )
