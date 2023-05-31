@@ -30,7 +30,7 @@ const Navbar = () => {
 
     return (
         <nav className='fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50' >
-            <h1 className='font-style w-full text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text[20px]'>Jordan Nitta-Rodrigues</h1>
+            <h1 className='font-style w-[100%] text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text-[20px]'>Jordan Nitta</h1>
             <ul className="hidden sm:flex sm:justify-center sm:items-center ">
                 {navLinks.map((link, index) => (
                     <li key={index}>

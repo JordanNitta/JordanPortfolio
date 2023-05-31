@@ -78,20 +78,22 @@ const Main = () => {
                         transition={{ duration: 1, delay: 0.6, ease: 'easeIn'  }}
                         className='flex justify-between item-center w-[150px] sm:absolute bottom-[40px]'>
                         <button className='flex items-center justify-center w-[50px] h-[50px] rounded-full border-[2px] border-primary-color z-10'>
-                            <a href="" className='flex items-center justify-center w-[150px] h-[100%] '>
+                            <a href="https://github.com/JordanNitta" target="_blank" className='flex items-center justify-center w-[150px] h-[100%] '>
                                 <FaGithub className='text-primary-color text-[25px]' />
                             </a>
                         </button>
                         <button className='flex items-center w-[50px] h-[50px] rounded-full border-[2px] border-primary-color z-10'>
-                            <a href="" className='flex items-center justify-center w-[150px] h-[100%]'>
+                            <a href="https://www.linkedin.com/in/jordan-nitta-rodrigues-824857238/" target="_blank" className='flex items-center justify-center w-[150px] h-[100%]'>
                                 <FaLinkedinIn className='text-primary-color text-[25px]' />
                             </a>
                         </button>
                     </motion.div>
-                    <div className=''>
-                        <img src={ProfilePic} alt='Profile pic'className='absolute bottom-0 right-0 h-[600px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 overflow-hidden '
+                    <div className='flex justify-center items-center'>
+                        <img src={ProfilePic} alt='Profile pic'className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 overflow-hidden 
+                        sm:absolute sm:bottom-0 sm:right-0 sm:h-[600px] sm:mix-blend-overlay filter brightness-125 contrast-60 saturate-20 overflow-hidden '
                     />
                     </div>
+
                 </div>
             </div>
         </div>
