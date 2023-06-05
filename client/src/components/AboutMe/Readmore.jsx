@@ -4,15 +4,15 @@ import { MdLocationOn, MdEmail } from 'react-icons/md'
 import { HiPhone } from 'react-icons/hi'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-const Readmore = ({ onClose }) => {
+const Readmore = ({ onClose, titleChange }) => {
     return (
-        <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-50 overflow-hidden rounded-main-radius sm:fixed sm:inset-0 sm:flex sm:w-[50%] sm:mx-auto sm:h-[90%]">
+        <div className="fixed top-0 mt-[68px] left-4 right-4 h-full bg-gray-800 z-40 overflow-y-hidden rounded-main-radius sm:fixed sm:inset-0 sm:flex sm:w-[50%] sm:mx-auto sm:h-[90%]">
             {/* fixed inset-0 flex items-center justify-center sm:max-w-lg mx-auto bg-gray-800 z-50 overflow-hidden rounded-main-radius */}
             <div className='flex flex-col justify-start'>
                 <div className='flex flex-col items-center justify-center mt-10'>
                     <img src={ProfilePic} alt="Profile Img" className='w-[250px] rounded-main-radius bg-black' />
                     <h2 className='text-[19px] text-main font-style font-semibold mt-3'>Jordan <span className='text-[19px] text-primary-color'>Nitta-Rodrigues</span></h2>
-                    <h3 className='text-[19px] font-style font-semibold mt-3 text-primary-color'>Frontend Developer</h3>
+                    <h3 className='text-[19px] font-style font-semibold mt-3 text-primary-color'>{titleChange}</h3>
                 </div>
                 <div className=''>
                     <ul className='flex flex-col w-full'>
@@ -51,13 +51,13 @@ const Readmore = ({ onClose }) => {
                     </ul>
                 </div>
                 <div className='flex justify-center items-center mt-10'>
-                    <button className='h-[50px] w-[95%] border-primary-color rounded-md border-2  flex justify-center items-center'>
+                    <button className='h-[50px] w-[95%] border-primary-color rounded-md border-2 flex justify-center items-center'>
                         <Link to='#' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
                     </button>
                 </div>
                 <button className="text-white absolute top-2 right-2 " onClick={onClose}>
                         Close
-                    </button>
+                </button>
             </div>
             
         </div>

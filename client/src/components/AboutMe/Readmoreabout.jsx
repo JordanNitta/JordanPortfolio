@@ -1,19 +1,22 @@
-import React from 'react'
+import { useEffect, useRef } from 'react'
 import Accoridan from './Accoridan'
 import ProfilePic from '../../assets/img/profile.png'
 import { MdLocationOn, MdEmail } from 'react-icons/md'
 import { HiPhone } from 'react-icons/hi'
-import { AiFillLinkedin } from 'react-icons/ai'
+import { AiFillLinkedin, AiOutlineClose } from 'react-icons/ai'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-const Readmore = ({ onClose }) => {
+const Readmore = ({ onClose, titleChange}) => {
     return (
-        <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-50 overflow-y-scroll rounded-main-radius sm:w-[90%] sm:mx-auto sm:h-[90%] md:w-[50%] lg:w-[40%]">
+        <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-50 overflow-y-scroll rounded-main-radius sm:w-[90%] sm:mx-auto sm:h-[90%] md:w-[50%] lg:w-[40%] ">
             {/* fixed inset-0 flex items-center justify-center sm:max-w-lg mx-auto bg-gray-800 z-50 overflow-hidden rounded-main-radius */}
+            <div className='flex justify-end mr-3'>
+                <AiOutlineClose size={35} className='text-white fixed mt-2 cursor-pointer' onClick={onClose} />
+            </div>
             <div className='flex flex-col justify-center'>
                 <div className='flex flex-col items-center justify-start mt-10'>
                     <img src={ProfilePic} alt="Profile Img" className='w-[250px] rounded-main-radius bg-black' />
                     <h2 className='text-[19px] text-main font-style font-semibold mt-3'>Jordan <span className='text-[19px] text-primary-color'>Nitta-Rodrigues</span></h2>
-                    <h3 className='text-[19px] font-style font-semibold mt-3 text-primary-color'>Frontend Developer</h3>
+                    <h3 className='text-[19px] font-style font-semibold mt-3 text-primary-color'>{titleChange}</h3>
                 </div>
                 <div className=''>
                     <ul className='flex flex-col w-full'>
@@ -55,18 +58,13 @@ const Readmore = ({ onClose }) => {
                         <p className='text-main mt-4'>Hi I'm Jordan Nitta-Rodrigues and I am a passionate frontend developer with a passion for creating an intuitive user experience on the web. With an eye for design I strive to craft visually appealing and functional websites. My journey as a frontend developer has allowed me to combine my creativity and technical skills to bring ideads to life.</p>
                     </div>
                     <div className='p-6'>
-                        <h1 className='text-main font-style font-semibold text-[18px]'>Programming<span className='text-primary-color font-style font-semibold text-[18px]'>Skills</span></h1>
+                        <h1 className='text-main font-style font-semibold text-[18px]'>Programming <span className='text-primary-color font-style font-semibold text-[18px]'>Skills</span></h1>
                         <Accoridan />
                     </div>
                 </div>
-                <div className='flex justify-center items-center mt-10'>
-                    <button className='h-[50px] w-[95%] border-primary-color rounded-md border-2  flex justify-center items-center'>
+                <div className='flex justify-center items-center '>
+                    <button className='h-[50px] w-[95%] border-primary-color rounded-md border-2  flex justify-center items-center mb-2'>
                         <Link to='#' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
-                    </button>
-                </div>
-                <div>
-                    <button className="text-white absolute top-2 right-2" onClick={onClose}>
-                        Close
                     </button>
                 </div>
             </div>

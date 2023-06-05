@@ -49,7 +49,7 @@ const Contact = () => {
             setMessageError("")
         }
     }
-    
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -71,13 +71,13 @@ const Contact = () => {
 
     return (
         <div className='bg-main-color h-screen w-full flex flex-col justify-center items-center box-border overflow-hidden'>
-            <div className='flex justify-start items-center w-[98%] border-b-[1px]  border-primary-color sm:justify-center sm:items-center sm:w-[70%]'>
-                <h2 className='text-main text-[27px] font-bold font-playfair sm:md:text-bigFontSize'>
-                    Contact <span className='text-primary-color text-[27px] font-bold font-playfair sm:md:text-bigFontSize'>Me</span>
+            <div className='flex justify-center items-center w-[98%] mb-4 sm:justify-center sm:items-center sm:w-[70%] lg:p-3'>
+                <h2 className='text-main text-[30px] font-bold font-style sm:md:text-bigFontSize'>
+                    Contact <span className='text-primary-color text-[30px] font-bold font-style sm:md:text-bigFontSize'>Me</span>
                 </h2>
                 {/* <p>Fill out thr form below to get in touch. Let's connect</p> */}
             </div>
-            <div className='flex flex-col items-center justify-center w-[90%] sm:flex-row sm:w-[70%] sm:items-start sm:space-x-10'>
+            <div className='flex flex-col items-center justify-center w-[90%] lg:flex-row lg:w-[70%] lg:items-start lg:space-x-10 lg:p-10'>
                 <div className='flex flex-col items-start justify-start w-[100%]'>
                     <ul className='flex flex-col w-full'>
                         <li className='my-3'>
@@ -114,7 +114,7 @@ const Contact = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='flex flex-col w-full my-3'>
+                <div className='flex flex-col w-full my-3 sm:justify-start'>
                     <form ref={form} onSubmit={sendEmail}>
                         <div className='flex flex-col space-y-6 '>
                             <input type="text" name='name'
@@ -135,8 +135,8 @@ const Contact = () => {
                                 className=' text-main rounded-main-radius bg-gray-800 resize-none focus:outline-none pl-3 h-[100px] w-full p-[20px]'></textarea>
                         </div>
                         <div className='flex justify-center items-center sm:justify-start mt-3'>
-                            <button className='text-main font-style bg-primary-color rounded-main-radius p-3 flex justify-center items-center'>Send message
-                                <FiSend size={20} className='ml-3'/>
+                            <button className='text-main font-style bg-primary-color rounded-main-radius p-3 w-full sm:w-auto flex justify-center items-center md:p-3'>Send message
+                                <FiSend size={20} className='ml-3' />
                             </button>
                         </div>
                     </form>
