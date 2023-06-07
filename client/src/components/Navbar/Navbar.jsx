@@ -1,17 +1,18 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link, NavLink, Navigate, useNavigate } from 'react-router-dom'
+// import {Link} from 'react-scroll'
+import { Link, NavLink } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
-
+    const [scrollBg, setScrollBg] = useState(false);
     const navLinks = [
-        { title: 'Home', URL: '/' },
-        { title: 'About', URL: '/about' },
-        { title: 'Contact', URL: '/contact' },
-        { title: 'Project', URL: '/project' },
+        { title: 'Home', URL: '/'},
+        { title: 'About', URL: '/about'},
+        { title: 'Contact', URL: '/contact'},
+        { title: 'Project', URL: '/project'},
     ]
 
     const personalLinks = [
@@ -27,13 +28,25 @@ const Navbar = () => {
         setShowMenu(false)
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 100;
+            setScrollBg(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <nav className='fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50 bg-black lg:bg-transparent' >
+        <nav className={`fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50 ${scrollBg ? 'bg-black' : 'bg-transparent'}`} >
             <h1 className='font-style w-[100%] text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text-[20px]'>Jordan Nitta</h1>
             <ul className="hidden lg:flex lg:justify-center lg:items-center">
                 {navLinks.map((link, index) => (
                     <li key={index}>
-                        <NavLink to={link.URL} className={({ isActive }) => isActive ? 'font-style text-primary-color text-[19px] px-4' : 'font-style text-main text-[19px] px-4'}>
+                        <NavLink to={link.URL} spy={true} smooth={true} offset={50} duration={500} className={({ isActive }) => isActive ? 'font-style text-primary-color text-[19px] px-4' : 'font-style text-main text-[19px] px-4'}>
                             {link.title}
                         </NavLink>
                     </li>

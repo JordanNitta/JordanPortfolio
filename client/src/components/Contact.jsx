@@ -70,7 +70,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='bg-main-color h-screen w-full flex flex-col justify-center items-center box-border overflow-hidden'>
+        <div className='bg-main-color h-screen w-full flex flex-col justify-center items-center box-border overflow-hidden border-b-[1px] border-primary-color' id='contact'>
             <div className='flex justify-center items-center w-[98%] mb-4 sm:justify-center sm:items-center sm:w-[70%] lg:p-3'>
                 <h2 className='text-main text-[30px] font-bold font-style sm:md:text-bigFontSize'>
                     Contact <span className='text-primary-color text-[30px] font-bold font-style sm:md:text-bigFontSize'>Me</span>

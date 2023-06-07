@@ -24,7 +24,7 @@ const Navbar = () => {
         setShowMenu(false)
     }
     return (
-        <div className='flex justify-between items-center w-full z-50 fixed h-20 mx-2'>
+        <div className='bg-main-color flex justify-between items-center w-full z-50 fixed h-20 mx-2'>
             <h3 className='font-style text-main font-semibold text-[20px] cursor-pointer'>Jordan Nitta-Rodrigues</h3>
             <div className='flex justify-end items-center mx-2' onClick={handleMenu}>
                 {

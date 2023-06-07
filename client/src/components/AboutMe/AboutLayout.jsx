@@ -63,13 +63,13 @@ const AboutLayout = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden'>
+        <div className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden border-b-[1px] border-primary-color'>
             <div className="flex justify-center items-center h-screen mb-10 lg:mr-40 xl:mr-60  ">
                 <div className="flex flex-col items-center sm:flex-col sm:items-center sm:justify-center md:justify-start md:items-center lg:justify-end lg:items-end">
                     <div className='flex justify-center items-center'>
-                        <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20  
-                        md:absolute md:bottom-0 md:left-0 md:h-[400px] md:mix-blend-overlay c ontrast-60 saturate-20 overflow-hidden lg:absolute lg:bottom-0 lg:left-0 lg:h-[500px]
-                        xl:absolute xl:bottom-0 xl:left-0 xl:h-[600px]'
+                        <img src={ProfilePic} alt='Profile pic' className='absolute -bottom-[832px] right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20  
+                        md:absolute md:-bottom-[832px] md:left-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:-bottom-[832px] lg:left-0 lg:h-[500px]
+                        xl:absolute xl:-bottom-[832px] xl:left-0 xl:h-[600px] '
                         />
 
                     </div>
@@ -78,7 +78,7 @@ const AboutLayout = () => {
                             About <span className='text-primary-color font-bold font-style text-[44px] sm:md:text-bigFontSize'>Me</span>
                         </h1>
                         <br />
-                        <p className='text-main font-semi-bold font-style text-center text-[19px] sm:text-[19px] sm:text-center  md:text-[19px] md:text-left'>
+                        <p className='text-main font-semi-bold font-style text-center text-[19px] sm:text-[19px] sm:text-center md:text-[19px] md:text-left'>
                             Hi I'm Jordan Nitta-Rodrigues and I am a passionate frontend developer with a passion for creating an intuitive user experience on the web. With an eye for design I strive to craft visually appealing and functional websites. My journey as a frontend developer has allowed me to combine my creativity and technical skills to bring ideads to life.
                         </p>
                         <button className='btn mt-4' onClick={handleOpenPopup}>Read More</button>
