@@ -7,7 +7,7 @@ import { AiFillLinkedin, AiOutlineClose } from 'react-icons/ai'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 const Readmore = ({ onClose, titleChange}) => {
     return (
-        <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-50 overflow-y-scroll rounded-main-radius sm:w-[90%] sm:mx-auto sm:h-[90%] md:w-[50%] lg:w-[40%] ">
+        <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-10 overflow-y-scroll rounded-main-radius sm:w-[90%] sm:mx-auto sm:h-[90%] md:w-[50%] lg:w-[40%] ">
             {/* fixed inset-0 flex items-center justify-center sm:max-w-lg mx-auto bg-gray-800 z-50 overflow-hidden rounded-main-radius */}
             <div className='flex justify-end mr-3'>
                 <AiOutlineClose size={35} className='text-white fixed mt-2 cursor-pointer' onClick={onClose} />

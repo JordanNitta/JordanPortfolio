@@ -41,7 +41,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50 ${scrollBg ? 'bg-black' : 'bg-transparent'}`} >
+        <nav className={`fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50 overflow-y-hidden ${scrollBg ? 'bg-black' : 'bg-transparent'}`} >
             <h1 className='font-style w-[100%] text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text-[20px]'>Jordan Nitta</h1>
             <ul className="hidden lg:flex lg:justify-center lg:items-center">
                 {navLinks.map((link, index) => (

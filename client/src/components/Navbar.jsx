@@ -1,20 +1,24 @@
 import React from 'react'
-import { useState } from 'react'
-import { NavLink, Navigate, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
-    const navigate = useNavigate()
     const [showMenu, setShowMenu] = useState(false);
-    const [color, setColor] = useState(false);
-    const changeColor = () => {
-        if(window.screenY >= 90) {
-            setColor(true);
-        } else {
-            setColor(false)
-        }
-    }
+    const [scrollBg, setScrollBg] = useState(false);
+    const navLinks = [
+        { title: 'Home', id: 'home' },
+        { title: 'About', id: 'about' },
+        { title: 'Project', id: 'project' },
+        { title: 'Contact', id: 'contact' },
+    ]
+
+    const personalLinks = [
+        { logo: FaGithub, URL: 'https://github.com/JordanNitta' },
+        { logo: FaLinkedinIn, URL: 'https://www.linkedin.com/in/jordan-nitta-rodrigues-824857238/' }
+    ]
 
     const handleMenu = () => {
         setShowMenu(!showMenu);
@@ -23,38 +27,88 @@ const Navbar = () => {
     const handleClosedRoutes = () => {
         setShowMenu(false)
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 100;
+            setScrollBg(isScrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className='bg-main-color flex justify-between items-center w-full z-50 fixed h-20 mx-2'>
-            <h3 className='font-style text-main font-semibold text-[20px] cursor-pointer'>Jordan Nitta-Rodrigues</h3>
-            <div className='flex justify-end items-center mx-2' onClick={handleMenu}>
-                {
-                    !showMenu ?
-                        <AiOutlineMenu size={35} className=" text-main cursor-pointer" />
-                        :
-                        <AiOutlineClose size={35} className="text-main cursor-pointer" />
-                }
+        <nav className={`fixed w-full flex justify-between h-[68px] items-center sm:px-4 sm:py-2 z-50 ${scrollBg ? 'bg-black' : 'bg-transparent'}`} >
+            <h1 className='font-style w-[100%] text-main font-semibold text-[20px] ml-2 cursor-pointer sm:text-[20px]'>Jordan Nitta</h1>
+            <ul className="hidden lg:flex lg:justify-center lg:items-center">
+                {navLinks.map((link, index) => (
+                    <li key={index} >
+                        <Link
+                            activeClass="text-primary-color"
+                            to={link.id}
+                            spy={true}
+                            smooth={true}
+                            offset={2}
+                            duration={500}
+                            className="font-style text-main text-[19px] px-4"
+                            activeClassName="text-primary-color"
+                        >
+                            {link.title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            <div onClick={handleMenu} className=''>
+                {!showMenu ? <AiOutlineMenu size={35} className='cursor-pointer text-main ml-1 lg:hidden' /> : <AiOutlineClose size={35} className='cursor-pointer ml-2 text-main lg:hidden' />}
             </div>
             <AnimatePresence>
                 {showMenu && (
                     <motion.div
                         initial={{ y: -500, opacity: 0 }}
                         animate={{ y: 0, opacity: 10 }}
-                        exit={{ y: 0, opacity: 0 }}
+                        exit={{ y: 0, opacity: -0 }}
                         transition={{ duration: .8 }}
-                        className='fixed top-0 left-0 h-screen w-full bg-gray-800 bg-opacity-90 flex justify-center items-center -z-50'
-                    >
-                        <div className='flex flex-col justify-center items-center cursor-pointer'>
-                            <NavLink to="/" className={({isActive}) => isActive ? 'font-style text-primary-color text-[60px]' :'font-style text-main text-[60px]'} onClick={handleClosedRoutes} >Home</NavLink>
-                            <NavLink to="/about" className={({isActive}) => isActive ? 'font-style text-primary-color text-[60px]' :'font-style text-main text-[60px]'} onClick={handleClosedRoutes}>About</NavLink>
-                            <NavLink to='/contact' className={({isActive}) => isActive ? 'font-style text-primary-color text-[60px]' :'font-style text-main text-[60px]'} onClick={handleClosedRoutes}>Skills</NavLink>
-                            <NavLink to='/contact' className={({isActive}) => isActive ? 'font-style text-primary-color text-[60px]' :'font-style text-main text-[60px]'} onClick={handleClosedRoutes}>Projects</NavLink>
-                            <NavLink to='/contact' className={({isActive}) => isActive ? 'font-style text-primary-color text-[60px]' :'font-style text-main text-[60px]'} onClick={handleClosedRoutes}>Contact</NavLink>
-                        </div>
+                        className='fixed top-0 left-0 h-screen w-full bg-opacity-90 bg-gray-800 flex justify-center items-center lg:hidden -z-30' >
+                        <ul className='flex flex-col justify-center items-center -space-y-3 ' onClick={handleClosedRoutes}>
+                            {navLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Link
+                                        activeClass="text-primary-color"
+                                        to={link.id}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={2}
+                                        duration={500}
+                                        className="font-style text-main text-[60px] font-semibold hover:text-primary-color transition duration-500"
+                                        activeClassName="text-primary-color"
+                                        onClick={handleClosedRoutes}
+                                    >
+                                        {link.title}
+                                    </Link>
+                                </li>
+                            ))}
+                            <div className='flex space-x-10'>
+                                {personalLinks.map((link, index) => {
+                                    const IconLogo = link.logo;
+                                    return (
+                                        <li key={index} className="text-main mt-10  hover:text-primary-color transition duration-500">
+                                            <a href={link.URL}>
+                                                <IconLogo size={25} />
+                                            </a>
+                                        </li>
+                                    );
+                                })}
+                            </div>
+                        </ul>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div >
-    );
+        </nav>
+
+    )
 }
 
 

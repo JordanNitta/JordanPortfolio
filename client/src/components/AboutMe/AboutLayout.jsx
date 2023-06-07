@@ -63,7 +63,7 @@ const AboutLayout = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden border-b-[1px] border-primary-color'>
+        <div id="about" className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden border-b-[1px] border-primary-color'>
             <div className="flex justify-center items-center h-screen mb-10 lg:mr-40 xl:mr-60  ">
                 <div className="flex flex-col items-center sm:flex-col sm:items-center sm:justify-center md:justify-start md:items-center lg:justify-end lg:items-end">
                     <div className='flex justify-center items-center'>
