@@ -20,6 +20,7 @@ const Project = () => {
                             <button className='h-[40px] w-[40%] border-primary-color rounded-md border-2 flex justify-center items-center mt-4'>
                                 <Link to='#' className='text-medium font-style tracking-tighter text-primary-color'>Demo</Link>
                             </button>
+                            
                         </div>
                     </div>
                 </div>
