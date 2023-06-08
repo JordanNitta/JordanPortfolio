@@ -1,19 +1,13 @@
 import ProfilePic from '../../assets/img/profile.png'
-import { useState } from 'react';
+
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { FiArrowRight } from 'react-icons/fi';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, } from "framer-motion";
 import { Link } from 'react-scroll'
 const Home = () => {
-    const [hover, setHover] = useState(true);
-
-    const handleHover = () => {
-        setHover(hover)
-    }
 
     return (
-        <div id="home" className='bg-main-color h-screen flex justify-center items-center box-border border-b-[1px] border-primary-color md:justify-center md:items-center lg:justify-start z-50'>
+        <div id="home" className='bg-main-color h-screen flex justify-center items-center z-50 box-border border-b-[1px] border-primary-color md:justify-center md:items-center lg:justify-start '>
             <div className="flex justify-center items-center h-screen mb-10 lg:ml-40 xl:ml-60 ">
                 <div className="flex flex-col items-center sm:flex-col sm:items-center sm:justify-center md:justify-start md:items-center lg:justify-start lg:items-start">
                     <motion.h1
@@ -71,7 +65,7 @@ const Home = () => {
                         </button>
 
                         <button className='h-[50px] w-main-button-width border-primary-color rounded-md border-2  flex justify-center items-center z-10'>
-                            <Link to='#' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
+                            <Link to='' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
                         </button>
                     </motion.div>
 
@@ -93,8 +87,8 @@ const Home = () => {
                         </button>
                     </motion.div>
                     <div className='flex justify-center items-center'>
-                        <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 overflow-hidden 
-                        md:absolute md:bottom-0 md:right-0 md:h-[400px] md:mix-blend-overlay filter brightness-125 contrast-60 saturate-20 overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:h-[500px]
+                        <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 
+                        md:absolute md:bottom-0 md:right-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:h-[500px]
                         xl:absolute xl:bottom-0 xl:right-0 xl:h-[600px] z-10'
                         />
                     </div>

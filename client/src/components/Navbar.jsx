@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
-import { NavLink } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,7 +52,7 @@ const Navbar = () => {
                             smooth={true}
                             offset={2}
                             duration={500}
-                            className="font-style text-main text-[19px] px-4"
+                            className="font-style text-main text-[19px] px-4 cursor-pointer"
                             activeClassName="text-primary-color"
                         >
                             {link.title}
