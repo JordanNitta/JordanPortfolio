@@ -1,11 +1,10 @@
 import ProfilePic from '../../assets/img/profile.png'
-
+import JordanUpdatedResume from '../../assets/img/JordanUpdatedResume.pdf'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, } from "framer-motion";
 import { Link } from 'react-scroll'
 const Home = () => {
-
     return (
         <div id="home" className='bg-main-color h-screen flex justify-center items-center z-50 box-border border-b-[1px] border-primary-color md:justify-center md:items-center lg:justify-start '>
             <div className="flex justify-center items-center h-screen mb-10 lg:ml-40 xl:ml-60 ">
@@ -64,8 +63,8 @@ const Home = () => {
                             </Link>
                         </button>
 
-                        <button className='h-[50px] w-main-button-width border-primary-color rounded-md border-2  flex justify-center items-center z-10'>
-                            <Link to='' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
+                        <button onClick={() => window.open(JordanUpdatedResume, '_blank')}className='h-[50px] w-main-button-width border-primary-color rounded-md border-2  text-medium font-style tracking-tighter text-primary-color flex justify-center items-center z-10'>
+                             View Resume
                         </button>
                     </motion.div>
 
