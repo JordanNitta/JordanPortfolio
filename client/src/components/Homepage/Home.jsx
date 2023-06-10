@@ -27,12 +27,11 @@ const Home = () => {
                             sequence={[
                                 'Front End Developer',
                                 2000,
-                                'React',
+                                '',
+                                0.1,
+                                'Front End Developer',
                                 1000,
-                                'NodeJs',
-                                1000,
-                                'Express',
-                                1000,
+                                
                             ]}
                             speed={50}
                             className='text-primary-color font-bold font-style text-[44px] sm:text-[44px] md:text-bigFontSize'
