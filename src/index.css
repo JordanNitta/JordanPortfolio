@@ -5,6 +5,6 @@
 @layer base {
     body{
         @apply bg-main-color;
-
+        @apply overflow-x-hidden
     }
 }
