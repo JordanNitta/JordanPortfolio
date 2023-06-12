@@ -7,7 +7,7 @@
     border: .2rem solid #00abf0;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 1rem;
+    border-radius: 8px;
     background: #00abf0;
     transition: .5s ease;
     z-index: 1;
