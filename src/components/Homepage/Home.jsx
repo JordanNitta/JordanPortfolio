@@ -84,7 +84,7 @@ const Home = () => {
                         </button>
                     </motion.div>
                     <div className='flex justify-center items-center '>
-                        <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 
+                        <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[200px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 
                         md:absolute md:bottom-0 md:right-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:h-[500px]
                         xl:absolute xl:bottom-0 xl:right-0 xl:h-[600px]'
                         />
