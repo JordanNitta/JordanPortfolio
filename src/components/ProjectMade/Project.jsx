@@ -12,7 +12,7 @@ const Project = () => {
                     <div className='flex flex-col items-center justify-center mt-8 sm:mt-0 '>
                         <h4 className='text-[30px] text-main font-semibold font-style'>Starbucks Clone</h4>
                         <h4 className='text-main text-[20px] pt-2 font-semibold font-style'>Full Stack Development</h4>
-                        <p className='text-center text-main pt-2 text-[17px] lg:w-[70%] font-style'>Collaborated with a developer to develop a Starbucks Clone application where users can order and create an account utilizing React, MongoDB, Tailwind CSS.</p>
+                        <p className='text-center text-main pt-2 text-[17px] lg:w-[70%] font-style'>Collaborated with <a href="https://www.abrardev.com/">Abrar</a> to develop a Starbucks Clone application where users can order and create an account utilizing React, MongoDB, Tailwind CSS.</p>
                         <div className='flex space-x-10 w-[300px] justify-center'>
                             <button className='h-[40px] w-[40%] border-primary-color bg-primary-color rounded main-radius border-2 flex justify-center items-center mt-4'>
                                 <Link to='https://github.com/abrarhussain-00/starbucksClone' className='text-main-color text-medium font-style tracking-[1.4] font-semibold'>Github</Link>
