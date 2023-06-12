@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react'
 import Accoridan from './Accoridan'
 import ProfilePic from '../../assets/img/profile.png'
 import { MdLocationOn, MdEmail } from 'react-icons/md'
 import { HiPhone } from 'react-icons/hi'
+import JordanUpdatedResume from '../../assets/img/JordanUpdatedResume.pdf'
 import { AiFillLinkedin, AiOutlineClose } from 'react-icons/ai'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const Readmore = ({ onClose, titleChange}) => {
     return (
         <div className="fixed top-0 mt-[68px] left-4 right-4 h-screen bg-gray-800 z-10 overflow-y-scroll rounded-main-radius sm:w-[90%] sm:mx-auto sm:h-[90%] md:w-[50%] lg:w-[40%] ">
@@ -63,8 +63,8 @@ const Readmore = ({ onClose, titleChange}) => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center '>
-                    <button className='h-[50px] w-[95%] border-primary-color rounded-md border-2  flex justify-center items-center mb-2'>
-                        <Link to='#' className='text-medium font-style tracking-tighter text-primary-color'>View Resume</Link>
+                    <button onClick={() => window.open(JordanUpdatedResume, '_blank')} className='h-[50px] w-[95%] border-primary-color rounded-md border-2  flex justify-center items-center mb-2 text-medium font-style tracking-tighter text-primary-color'>
+                        View Resume
                     </button>
                 </div>
             </div>
