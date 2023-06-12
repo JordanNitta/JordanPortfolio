@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Project = () => {
     return (
         <>
-            <div id="project" className='bg-main-color w-full flex justify-center items-center h-screen sm:border-b-[1px] border-primary-color'>
+            <div id="project" className='bg-main-color w-full flex justify-center items-center h-screen sm:border-b-[1px] sm:border-primary-color'>
                 <div className='flex-col justify-center items-center sm:w-[90%] lg:flex px-20 lg:flex-row lg:w-[88%]'>
                     <div className='flex justify-center lg:w-full'>
                         <img src={StarbucksProject} alt="Starbucks Project" className='h-[200px] md:w-[500px] md:h-[320px] rounded-md ' />
