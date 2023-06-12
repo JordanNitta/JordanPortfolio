@@ -34,7 +34,7 @@ const Home = () => {
                                 
                             ]}
                             speed={50}
-                            className='text-primary-color font-bold font-style text-[44px] sm:text-[44px] md:text-bigFontSize'
+                            className='text-primary-color font-bold font-style text-[30px] text-[44px] sm:text-[44px] md:text-bigFontSize'
                             repeat={Infinity}
                         />
                     </motion.div>
