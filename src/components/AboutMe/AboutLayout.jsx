@@ -67,9 +67,9 @@ const AboutLayout = () => {
             <div className="flex justify-center items-center h-screen mb-10 lg:mr-40 xl:mr-60  ">
                 <div className="flex flex-col items-center sm:flex-col sm:items-center sm:justify-center md:justify-start md:items-center lg:justify-end lg:items-end">
                     <div className='flex justify-center items-center'>
-                        <img src={ProfilePic} alt='Profile pic' className='absolute -bottom-[780px] right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20  
-                        md:absolute md:-bottom-[780px] md:left-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:-bottom-[780px] lg:left-0 lg:h-[500px]
-                        xl:absolute xl:-bottom-[780px] xl:left-0 xl:h-[600px] '
+                        <img src={ProfilePic} alt='Profile pic' className='absolute -bottom-[775px] right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20  
+                        md:absolute md:-bottom-[775px] md:left-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:-bottom-[775px] lg:left-0 lg:h-[500px]
+                        xl:absolute xl:-bottom-[775px] xl:left-0 xl:h-[600px] '
                         />
                     </div>
                     <div className='flex flex-col items-center justify-center mb-[200px] w-[90%] md:justify-end md:items-center md:w-[80%] md:mb-[200px] lg:mb-0 lg:justify-start lg:items-start lg:w-[50%] '>
