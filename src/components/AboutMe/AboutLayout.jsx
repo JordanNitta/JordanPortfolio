@@ -63,7 +63,7 @@ const AboutLayout = () => {
         //         </div>
         //     </div>
         // </div>
-        <div id="about" className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden border-b-[1px] border-primary-color'>
+        <div id="about" className='bg-main-color h-screen flex justify-center items-center box-border overflow-hidden sm:border-b-[1px] sm:border-primary-color'>
             <div className="flex justify-center items-center h-screen mb-10 lg:mr-40 xl:mr-60  ">
                 <div className="flex flex-col items-center sm:flex-col sm:items-center sm:justify-center md:justify-start md:items-center lg:justify-end lg:items-end">
                     <div className='flex justify-center items-center'>
@@ -73,11 +73,11 @@ const AboutLayout = () => {
                         />
                     </div>
                     <div className='flex flex-col items-center justify-center mb-[200px] w-[90%] md:justify-end md:items-center md:w-[80%] md:mb-[200px] lg:mb-0 lg:justify-start lg:items-start lg:w-[50%] '>
-                        <h1 className='text-main font-bold font-style text-[44px] sm:md:text-bigFontSize'>
-                            About <span className='text-primary-color font-bold font-style text-[44px] sm:md:text-bigFontSize'>Me</span>
+                        <h1 className='text-main font-bold font-style text-[30px] sm:text-[44px] sm:md:text-bigFontSize'>
+                            About <span className='text-primary-color font-bold font-style text-[30px] sm:text-[44px] sm:md:text-bigFontSize'>Me</span>
                         </h1>
                         <br />
-                        <p className='text-main font-semi-bold font-style text-center text-[19px] sm:text-[19px] sm:text-center md:text-[19px] md:text-left'>
+                        <p className='text-main font-semi-bold font-style text-center text-[17px] sm:text-[19px] sm:text-center md:text-[19px] md:text-left'>
                             Hi I'm Jordan Nitta-Rodrigues and I am a passionate frontend developer with a passion for creating an intuitive user experience on the web. With an eye for design I strive to craft visually appealing and functional websites. My journey as a frontend developer has allowed me to combine my creativity and technical skills to bring ideads to life.
                         </p>
                         <button className='btn mt-4' onClick={handleOpenPopup}>Read More</button>
