@@ -76,7 +76,7 @@ const Navbar = () => {
                                     const IconLogo = link.logo;
                                     return (
                                         <li key={index} className="text-main mt-10  hover:text-primary-color transition duration-500">
-                                            <a href={link.URL}>
+                                            <a href={link.URL} target="_blank" rel="noopener noreferrer" >
                                                 <IconLogo size={25} />
                                             </a>
                                         </li>

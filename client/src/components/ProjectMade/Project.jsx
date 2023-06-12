@@ -18,7 +18,7 @@ const Project = () => {
                                 <Link to='https://github.com/abrarhussain-00/starbucksClone' className='text-main-color text-medium font-style tracking-[1.4] font-semibold'>Github</Link>
                             </button>
                             <button className='h-[40px] w-[40%] border-primary-color border-2 rounded main-radius flex justify-center items-center mt-4'>
-                                <Link to='#' className='text-primary-color text-medium font-style tracking-[1.4] font-semibold'>Demo</Link>
+                                <Link to='http://18.117.132.42/' target="_blank" rel="noopener noreferrer"  className='text-primary-color text-medium font-style tracking-[1.4] font-semibold'>Demo</Link>
                             </button>
                         </div>
                     </div>

@@ -61,9 +61,8 @@ const Home = () => {
                                 Contact Me
                             </Link>
                         </button>
-
                         <button onClick={() => window.open(JordanUpdatedResume, '_blank')}className='h-[50px] w-main-button-width border-primary-color rounded-md border-2  text-medium font-style tracking-tighter text-primary-color flex justify-center items-center z-10'>
-                             View Resume
+                            View Resume
                         </button>
                     </motion.div>
 
@@ -74,20 +73,20 @@ const Home = () => {
                         transition={{ duration: 1, delay: 0.5, ease: 'easeIn' }}
                         className='flex justify-between item-center w-[150px] lg:absolute bottom-[40px] mt-4'>
                         <button className='flex items-center justify-center w-[50px] h-[50px] rounded-full border-[2px] border-primary-color z-10'>
-                            <a href="https://github.com/JordanNitta" target="_blank" className='flex items-center justify-center w-[150px] h-[100%] '>
+                            <a href="https://github.com/JordanNitta" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center w-[150px] h-[100%] '>
                                 <FaGithub className='text-primary-color text-[25px]' />
                             </a>
                         </button>
                         <button className='flex items-center w-[50px] h-[50px] rounded-full border-[2px] border-primary-color z-10'>
-                            <a href="https://www.linkedin.com/in/jordan-nitta-rodrigues-824857238/" target="_blank" className='flex items-center justify-center w-[150px] h-[100%]'>
+                            <a href="https://www.linkedin.com/in/jordan-nitta-rodrigues-824857238/" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center w-[150px] h-[100%]'>
                                 <FaLinkedinIn className='text-primary-color text-[25px]' />
                             </a>
                         </button>
                     </motion.div>
-                    <div className='flex justify-center items-center'>
+                    <div className='flex justify-center items-center '>
                         <img src={ProfilePic} alt='Profile pic' className='absolute bottom-0 right-50 left-50 h-[300px] mix-blend-overlay filter brightness-125 contrast-60 saturate-20 
                         md:absolute md:bottom-0 md:right-0 md:h-[400px] md:mix-blend-overlay contrast-60 saturate-20 overflow-hidden lg:absolute lg:bottom-0 lg:right-0 lg:h-[500px]
-                        xl:absolute xl:bottom-0 xl:right-0 xl:h-[600px] z-10'
+                        xl:absolute xl:bottom-0 xl:right-0 xl:h-[600px]'
                         />
                     </div>
 
