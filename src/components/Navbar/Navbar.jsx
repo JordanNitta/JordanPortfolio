@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [scrollBg, setScrollBg] = useState(false);
+    
     const navLinks = [
         { title: 'Home', URL: '/'},
         { title: 'About', URL: '/about'},
